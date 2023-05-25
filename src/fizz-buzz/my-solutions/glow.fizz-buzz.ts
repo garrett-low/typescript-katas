@@ -13,12 +13,14 @@ export function fizzBuzz(input: number): numberOrString[] {
         continue
       }
 
+      const val = fizzMap.get(divisorKey) ?? ''
       if (!output[i]) {
-        output[i] = fizzMap.get(divisorKey) ?? ''
+        output[i] = val
       } else {
-        output[i] += fizzMap.get(divisorKey) ?? ''
+        output[i] += val
       }
     }
+
     if (!output[i]) {
       output[i] = i + 1
     }
