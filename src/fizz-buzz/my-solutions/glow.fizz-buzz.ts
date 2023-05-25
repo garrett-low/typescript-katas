@@ -1,3 +1,4 @@
+// what the hell is husky pre-commit
 type numberOrString = number | string
 
 export function fizzBuzz(input: number): numberOrString[] {
