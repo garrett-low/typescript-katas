@@ -1,31 +1,32 @@
 // what the hell is husky pre-commit
-type numberOrString = number | string
+type numberOrString = number | string;
 
 export function fizzBuzz(input: number): numberOrString[] {
-  const output: numberOrString[] = []
+  const output: numberOrString[] = [];
   const fizzMap = new Map<number, string>([
     [3, 'fizz'],
     [5, 'buzz']
-  ])
+  ]);
 
   for (let i = 0; i < input; i++) {
     for (const divisorKey of fizzMap.keys()) {
       if ((i + 1) % divisorKey !== 0) {
-        continue
+        continue;
       }
 
       const val = fizzMap.get(divisorKey) ?? ''
       if (!output[i]) {
-        output[i] = val
-      } else {
-        output[i] += val
+        output[i] = val;
+      } 
+      else {
+        output[i] += val;
       }
     }
 
     if (!output[i]) {
-      output[i] = i + 1
+      output[i] = i + 1;
     }
   }
 
-  return output
+  return output;
 }
